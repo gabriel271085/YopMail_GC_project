@@ -22,7 +22,7 @@ namespace SeleniumTraining.src.code.test
         public void CreateAndVerifyMail()
         {
 
-            CreateMailSection.Login("gabrielC");
+            CreateMailSection.Login("gabrielCayoja");
             
             //send a new message
 
@@ -30,7 +30,7 @@ namespace SeleniumTraining.src.code.test
 
             InboxSection.Switchframe("ifmail");
             
-            InboxSection.ToTextBox.SetText("gabrielC@yopmail.com");
+            InboxSection.ToTextBox.SetText("gabrielCayoja@yopmail.com");
             InboxSection.SubjectTextbox.SetText("test");
             InboxSection.BodyTextbox.SetText("This is a test message for Mojix projects");
             InboxSection.SendButton.Click();
@@ -38,7 +38,7 @@ namespace SeleniumTraining.src.code.test
             //assert of the sent message
 
             Assert.IsTrue(InboxSection.ReadConfirmation("Tu mensaje ha sido enviado"), "Error, message was not created");
-
+            Thread.Sleep(1000);
 
             //verify the message
             Session.Instance().GetBrowser().SwitchTo().DefaultContent();
