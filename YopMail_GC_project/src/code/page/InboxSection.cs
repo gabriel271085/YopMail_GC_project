@@ -32,13 +32,6 @@ namespace SeleniumTraining.src.code.page
         return messageConfirmation.IsControlDisplayed();
         }
 
-        public Boolean VerifyContent(String content)
-        {
-            Label bodyContent = new Label(By.XPath(" //div[text()='" + content + "']"));
-            return bodyContent.IsControlDisplayed();
-        }
-
-
-
+       
     }
 }
